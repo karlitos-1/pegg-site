@@ -376,7 +376,6 @@ export default function MakalaMarketPage() {
               </Link>
             </div>
           </div>
-        </div>
       </section>
     </main>
       <Footer />
