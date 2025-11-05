@@ -1,3 +1,17 @@
+# -----------------------------
+# Netlify configuration for Next.js
+# -----------------------------
+
+# Build settings
+[build]
+  command = "npm run build"
+  publish = ".next"
+  environment = { 
+    NODE_VERSION = "18",            # Node compatible Next 15
+    NETLIFY_NEXT_PLUGIN_SKIP = "false" # Active le plugin Next.js
+  }
+
+# Allow remote images for next/image
 [images]
   remote_images = [
     "https://source.unsplash.com/.*",
@@ -6,13 +20,23 @@
     "https://ugc.same-assets.com/.*"
   ]
 
-[build]
-  command = "npm run build"
-  publish = ".next"
-
-[build.environment]
-  NODE_VERSION = "18"
-  NETLIFY_NEXT_PLUGIN_SKIP = "false"  # ou supprime cette ligne complètement
+# Plugins
+[[plugins]]
+  package = "@netlify/plugin-nextjs" # Gère SSR, App Router, ISR, Middleware
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-lighthouse" # Optionnel : audits perf et accessibilité
+  inputs = { thresholds = { performance = 90, accessibility = 90 } }
+
+# Redirect all requests to Netlify Next SSR function
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/next_ssr"
+  status = 200
+  force = true
+
+# Optional caching for faster rebuilds
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
