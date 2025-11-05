@@ -46,7 +46,7 @@ export default function Contact() {
           className="relative py-20 bg-cover bg-center border-b-4 border-[#e2630c]"
           style={{
             backgroundImage:
-              'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://ext.same-assets.com/2339639548/2650315842.false")',
+              'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/contact/ar.jpg")',
           }}
         >
           <div className="container mx-auto px-4 text-center text-white">

@@ -25,7 +25,7 @@ export default function Home() {
           className="relative py-20 md:py-32 bg-cover bg-center border-b-4 border-[#e2630c]"
           style={{
             backgroundImage:
-              'linear-gradient(rgba(0, 106, 52, 0.85), rgba(0, 106, 52, 0.85)), url("https://ext.same-assets.com/2339639548/1174603474.false")',
+              'linear-gradient(rgba(0, 106, 52, 0.85), rgba(0, 106, 52, 0.85)), url("/images/accueil/ar.png")',
           }}
         >
           <div className="container mx-auto px-4">
@@ -60,7 +60,7 @@ export default function Home() {
 
               <div className="bg-white rounded-xl shadow-2xl p-8">
                 <Image
-                  src="https://ext.same-assets.com/2339639548/1174603474.false"
+                  src="/images/accueil/ar.png"
                   alt="Équipe PeggSite"
                   width={600}
                   height={400}

@@ -141,7 +141,7 @@ export default function Portfolio() {
           className="relative py-20 bg-cover bg-center border-b-4 border-[#e2630c]"
           style={{
             backgroundImage:
-              'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://ext.same-assets.com/2339639548/1929065407.png")',
+              'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/portfolio/ar.jpg")',
           }}
         >
           <div className="container mx-auto px-4 text-center text-white">
@@ -254,7 +254,7 @@ export default function Portfolio() {
                     </div>
 
                     <Link
-                      href="/portfolio"
+                      href="/portfolio/makala-market"
                       className="block text-center bg-[#006a34] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#005028] transition-colors duration-200"
                     >
                       Voir le projet
