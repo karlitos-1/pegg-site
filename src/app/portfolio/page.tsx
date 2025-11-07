@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Navigation } from "@/components/navigation";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -95,21 +95,18 @@ const testimonials = [
   {
     name: "Jean MAKAYA",
     role: "PDG, Makala Market",
-    image: "https://ext.same-assets.com/2339639548/2660696870.false",
     content:
       "Pegg Site a transformé notre vision en une plateforme e-commerce exceptionnelle. Nos ventes ont augmenté de 250% depuis le lancement.",
   },
   {
     name: "Marie LOUBAKI",
     role: "Directrice, Hôtel Meridien",
-    image: "https://ext.same-assets.com/2339639548/4094138992.false",
     content:
       "Un travail remarquable ! Notre nouveau site web reflète parfaitement l'élégance de notre hôtel. Les réservations en ligne ont doublé.",
   },
   {
     name: "David NKOUNKOU",
     role: "CTO, EduCongo",
-    image: "https://ext.same-assets.com/2339639548/719823424.false",
     content:
       "L'équipe Pegg Site a créé une plateforme d'apprentissage innovante qui révolutionne l'éducation en ligne au Congo. Excellent travail !",
   },
@@ -134,7 +131,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
         <section
@@ -161,7 +158,7 @@ export default function Portfolio() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#e2630c] mb-2">
-                  150+
+                  50+
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">
                   Projets réalisés
@@ -177,7 +174,7 @@ export default function Portfolio() {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#e2630c] mb-2">
-                  50+
+                  17+
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">
                   Sites web créés
@@ -185,7 +182,7 @@ export default function Portfolio() {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#e2630c] mb-2">
-                  25+
+                  6+
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">
                   Apps développées
@@ -291,13 +288,6 @@ export default function Portfolio() {
                     "{testimonial.content}"
                   </p>
                   <div className="flex items-center">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      width={48}
-                      height={48}
-                      className="w-12 h-12 rounded-full mr-3 object-cover"
-                    />
                     <div>
                       <p className="font-semibold text-gray-900">
                         {testimonial.name}

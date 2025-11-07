@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Navigation } from "@/components/navigation";
 import {
   Facebook,
   Instagram,
@@ -39,7 +39,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
         <section

@@ -1,8 +1,7 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Navigation } from "@/components/navigation";
 
 import {
-  CheckCircle,
   Clock,
   Monitor,
   Search,
@@ -18,91 +17,84 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
-        <section
-          className="relative py-20 md:py-32 bg-cover bg-center border-b-4 border-[#e2630c]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(0, 106, 52, 0.85), rgba(0, 106, 52, 0.85)), url("/images/accueil/ar.png")',
-          }}
-        >
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0f3e2e]">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url("/images/accueil/agent.png")' }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0f3e2e]/90 via-[#0f3e2e]/85 to-transparent"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-white">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Votre <span className="text-[#e2630c]">Vision Digitale</span>
-                  <br />
-                  Notre <span className="text-[#e2630c]">Expertise</span>
+                <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
+                  Pegg Site
                 </h1>
-                <p className="text-lg md:text-xl mb-8 leading-relaxed">
-                  PeggSite transforme vos idées en solutions digitales
-                  performantes. Sites web, applications, marketing digital -
-                  nous créons votre succès en ligne.
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+                  Votre partenaire digital pour un avenir connecté
+                </h2>
+                <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed">
+                  Nous transformons vos idées en solutions digitales
+                  performantes. Sites web, applications, marketing digital. Tout
+                  pour booster votre présence en ligne.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/demande-devis"
-                    className="bg-white text-[#006a34] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
+                    className="bg-[#f47c20] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#e66e12] transition-all duration-300 transform hover:scale-105 whitespace-nowrap text-center"
                   >
-                    <Clock className="w-5 h-5 mr-2" />
-                    Demander un devis gratuit
+                    Demander un devis
                   </Link>
                   <Link
                     href="/services"
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#006a34] transition-all duration-200 inline-flex items-center justify-center"
+                    className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-[#0f3e2e] transition-all duration-300 whitespace-nowrap text-center"
                   >
                     Découvrir nos services
                   </Link>
                 </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-2xl p-8">
-                <Image
-                  src="/images/accueil/ar.png"
-                  alt="Équipe PeggSite"
-                  width={600}
-                  height={400}
-                  className="rounded-lg mb-6"
-                />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              {/* Right Card */}
+              <div className="bg-white rounded-xl p-8 shadow-2xl">
+                <h3 className="text-2xl font-bold text-[#006a34] mb-4">
                   Votre Partenaire Digital
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Une équipe d'experts passionnés à votre service pour
                   transformer vos idées en succès digital.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <div className="w-8 h-8 bg-[#e2630c] rounded-full flex items-center justify-center mr-3">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#e2630c] rounded-full flex items-center justify-center">
+                      <i className="ri-check-line text-white"></i>
                     </div>
                     <span className="text-gray-700">
-                      Expertise reconnue depuis 4 ans
+                      Expertise reconnue depuis 3 ans
                     </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-8 h-8 bg-[#e2630c] rounded-full flex items-center justify-center mr-3">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#e2630c] rounded-full flex items-center justify-center">
+                      <i className="ri-check-line text-white"></i>
                     </div>
                     <span className="text-gray-700">
-                      150+ projets réalisés avec succès
+                      50+ projets réalisés avec succès
                     </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-8 h-8 bg-[#e2630c] rounded-full flex items-center justify-center mr-3">
-                      <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#e2630c] rounded-full flex items-center justify-center">
+                      <i className="ri-check-line text-white"></i>
                     </div>
                     <span className="text-gray-700">
                       Support 24/7 et suivi personnalisé
                     </span>
-                  </li>
-                </ul>
+                  </div>
+                </div>
                 <Link
                   href="/contact"
-                  className="mt-6 block bg-[#006a34] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#005028] transition-colors duration-200 text-center"
+                  className="mt-6 w-full bg-[#006a34] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#005028] transition-colors duration-200 flex items-center justify-center gap-2"
                 >
+                  <i className="ri-phone-line"></i>
                   Contactez-nous
                 </Link>
               </div>
@@ -127,7 +119,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#e2630c] mb-2">
-                  150+
+                  50+
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">
                   Projets réalisés
@@ -149,7 +141,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-[#e2630c] mb-2">
-                  4
+                  3
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">
                   Années d'expérience
@@ -178,15 +170,15 @@ export default function Home() {
                   Qui sommes-nous ?
                 </h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  <strong>PeggSite</strong> est une agence digitale innovante
-                  basée à Pointe-Noire, spécialisée dans la création de
-                  solutions web sur mesure. Nous accompagnons les entreprises
-                  dans leur transformation digitale avec passion et expertise.
+                  <strong>Pegg Site</strong> est une agence digitale innovante,
+                  spécialisée dans la création de solutions web sur mesure. Nous
+                  accompagnons les entreprises dans leur transformation digitale
+                  avec passion et expertise.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Notre mission : faire de votre présence en ligne un véritable
-                  levier de croissance grâce à des technologies modernes et des
-                  stratégies marketing efficaces.
+                  Notre mission est de faire de votre présence en ligne un
+                  véritable levier de croissance grâce à des technologies
+                  modernes et des stratégies marketing efficaces.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
@@ -219,15 +211,15 @@ export default function Home() {
                 </div>
 
                 <div className="inline-block bg-[#006a34] text-white px-6 py-2 rounded-lg">
-                  <span className="text-2xl font-bold">+4 ans</span>
+                  <span className="text-2xl font-bold">+3 ans</span>
                   <span className="ml-2">d'expertise</span>
                 </div>
               </div>
 
               <div>
                 <Image
-                  src="https://ext.same-assets.com/2339639548/6386136.false"
-                  alt="Bureau PeggSite"
+                  src="/images/accueil/agent.png"
+                  alt="Equipe Pegg Site"
                   width={600}
                   height={400}
                   className="rounded-lg shadow-lg"
@@ -386,6 +378,100 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Portfolio Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Nos <span className="text-[#006a34]">Projets Récents</span>
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Découvrez quelques-unes de nos réalisations qui ont permis à nos
+                clients d'atteindre leurs objectifs
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Projet 1 */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <img
+                  src="https://ext.same-assets.com/2339639548/4226208831.false"
+                  alt="Boutique Mode Élégante"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary-700 mb-3">
+                    Boutique Mode Élégante
+                  </h3>
+                  <p className="text-forest-600 mb-4">
+                    Site e-commerce complet avec système de paiement intégré et
+                    gestion des stocks.
+                  </p>
+                  <Link
+                    href="/portfolio"
+                    className="text-accent-500 font-semibold hover:text-accent-600 transition-colors"
+                  >
+                    Voir le projet →
+                  </Link>
+                </div>
+              </div>
+              {/* Projet 2 */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <img
+                  src="https://ext.same-assets.com/2339639548/1865633476.false"
+                  alt="App Mobile de Livraison"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary-700 mb-3">
+                    App Mobile de Livraison
+                  </h3>
+                  <p className="text-forest-600 mb-4">
+                    Application mobile avec géolocalisation et suivi en temps
+                    réel des commandes.
+                  </p>
+                  <Link
+                    href="/portfolio"
+                    className="text-accent-500 font-semibold hover:text-accent-600 transition-colors"
+                  >
+                    Voir le projet →
+                  </Link>
+                </div>
+              </div>
+              {/* Projet 3 */}
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <img
+                  src="https://ext.same-assets.com/2339639548/1609458376.false"
+                  alt="Cabinet Juridique Prestige"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-primary-700 mb-3">
+                    Cabinet Juridique Prestige
+                  </h3>
+                  <p className="text-forest-600 mb-4">
+                    Site vitrine professionnel avec prise de rendez-vous en
+                    ligne et blog juridique.
+                  </p>
+                  <Link
+                    href="/portfolio"
+                    className="text-accent-500 font-semibold hover:text-accent-600 transition-colors"
+                  >
+                    Voir le projet →
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-12">
+              <Link
+                href="/portfolio"
+                className="inline-block bg-[#006a34] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#005028] transition-colors duration-200"
+              >
+                Voir tous nos projets
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Testimonials Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -410,7 +496,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "PeggSite a transformé notre présence en ligne. Notre site
+                  "Pegg Site a transformé notre présence en ligne. Notre site
                   e-commerce génère maintenant 40% de notre chiffre d'affaires
                   !"
                 </p>
@@ -431,7 +517,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-700 mb-4 italic">
                   "Excellent travail sur notre site web et nos réseaux sociaux.
-                  Nous avons doublé notre clientèle en 6 mois."
+                  Nous avons doublé notre clientèle en 4 mois."
                 </p>
                 <div>
                   <p className="font-semibold text-gray-900">
@@ -477,18 +563,14 @@ export default function Home() {
                 solutions performantes et évolutives
               </p>
             </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
               {["React", "Node.js", "Mobile", "Database", "Cloud", "SEO"].map(
                 (tech) => (
-                  <div
-                    key={tech}
-                    className="flex flex-col items-center justify-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition-shadow duration-300"
-                  >
-                    <div className="w-16 h-16 bg-gray-200 rounded-lg mb-3 flex items-center justify-center">
-                      <span className="text-2xl">⚙️</span>
+                  <div key={tech} className="text-center">
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <i className="ri-code-line text-2xl text-[#006a34]"></i>
                     </div>
-                    <p className="font-semibold text-gray-900">{tech}</p>
+                    <div className="font-medium text-gray-700">{tech}</div>
                   </div>
                 )
               )}

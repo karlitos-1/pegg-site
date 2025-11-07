@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Navigation } from "@/components/navigation";
 import { Clock, DollarSign, Users } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -77,7 +77,7 @@ export default function DemandeDevisPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
         <section
@@ -213,7 +213,7 @@ export default function DemandeDevisPage() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#006a34] focus:border-transparent outline-none transition-all"
-                        placeholder="+242 06 XXX XXXX"
+                        placeholder="+242 XX XXX XXXX"
                       />
                     </div>
 

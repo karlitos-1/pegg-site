@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Navigation } from "@/components/navigation";
 import { Award, Clock, Heart, Lightbulb, Target, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function APropos() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
         <section
@@ -37,7 +37,7 @@ export default function APropos() {
                   Notre Histoire
                 </h2>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  Fondée en 2020 à Pointe-Noire,{" "}
+                  Fondée en 2023 à Pointe-Noire,{" "}
                   <strong className="text-[#006a34]">Pegg Site</strong> est née
                   de la passion de créer des solutions digitales innovantes pour
                   les entreprises congolaises et africaines. Notre mission est
@@ -45,7 +45,7 @@ export default function APropos() {
                   d'accompagner nos clients dans leur transformation digitale.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Depuis nos débuts, nous avons aidé plus de 150 entreprises à
+                  Depuis nos débuts, nous avons aidé plus de 50 entreprises à
                   développer leur présence en ligne, générer des leads qualifiés
                   et augmenter leur chiffre d'affaires grâce à des stratégies
                   digitales sur mesure.
@@ -80,7 +80,7 @@ export default function APropos() {
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-[#e2630c] mb-1">
-                      150+
+                      50+
                     </div>
                     <div className="text-sm text-gray-600">
                       Projets réalisés
@@ -88,7 +88,7 @@ export default function APropos() {
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-[#e2630c] mb-1">
-                      4
+                      3
                     </div>
                     <div className="text-sm text-gray-600">
                       Années d'expérience
@@ -107,8 +107,8 @@ export default function APropos() {
 
               <div>
                 <Image
-                  src="https://ext.same-assets.com/2339639548/6386136.false"
-                  alt="Bureau PeggSite"
+                  src="/images/accueil/agent.png"
+                  alt="Equipe Pegg Site"
                   width={600}
                   height={400}
                   className="rounded-lg shadow-lg"
@@ -338,25 +338,27 @@ export default function APropos() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-[#006a34] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Parlons de votre projet</h2>
-            <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Vous avez un projet digital en tête ? Discutons-en ensemble et
-              trouvons la solution parfaite pour votre entreprise.
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-700 mb-6">
+              Rejoignez l'Aventure Pegg Site
+            </h2>
+            <p className="text-xl text-forest-700 mb-8 max-w-2xl mx-auto">
+              Prêt à transformer votre présence digitale ? Parlons de votre
+              projet et créons ensemble votre succès.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/demande-devis"
-                className="bg-[#e2630c] hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
+                href="/quote"
+                className="bg-accent-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-accent-600 transition-all duration-300 transform hover:scale-105"
               >
-                Demander un devis
+                Commencer un projet
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#006a34] px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-600 hover:text-white transition-all duration-300"
               >
-                Nous contacter
+                Nous rencontrer
               </Link>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Navigation } from "@/components/navigation";
 
 import {
   CheckCircle,
@@ -25,7 +25,7 @@ const services = [
   {
     icon: Monitor,
     title: "Création de Sites Web",
-    price: "À partir de 300 000 FCFA",
+    price: "À partir de 30 000 FCFA",
     description:
       "Sites web modernes, responsives et optimisés pour tous les appareils",
     duration: "Durée : 2-4 semaines",
@@ -33,13 +33,13 @@ const services = [
       "Design responsive et moderne",
       "Optimisation SEO de base",
       "Hébergement inclus (1 an)",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: ShoppingCart,
     title: "E-commerce & Boutiques en ligne",
-    price: "À partir de 500 000 FCFA",
+    price: "À partir de 80 000 FCFA",
     description:
       "Plateformes de vente en ligne complètes avec paiement sécurisé",
     duration: "Durée : 3-6 semaines",
@@ -47,39 +47,39 @@ const services = [
       "Catalogue produits illimité",
       "Panier et commandes",
       "Paiement mobile money",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: Smartphone,
     title: "Développement d'Applications Mobiles",
-    price: "À partir de 800 000 FCFA",
+    price: "À partir de 120 000 FCFA",
     description: "Applications natives et hybrides pour iOS et Android",
     duration: "Durée : 6-12 semaines",
     features: [
       "Applications natives iOS/Android",
       "Interface utilisateur intuitive",
       "Intégration API",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: TrendingUp,
     title: "Marketing Digital & Publicité",
-    price: "À partir de 150 000 FCFA/mois",
+    price: "À partir de 50 000 FCFA/mois",
     description: "Stratégies marketing complètes pour booster votre visibilité",
     duration: "Durée : Contrat mensuel",
     features: [
       "Stratégie marketing personnalisée",
       "Gestion réseaux sociaux",
       "Campagnes publicitaires",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: Search,
     title: "SEO & Référencement",
-    price: "À partir de 100 000 FCFA/mois",
+    price: "À partir de 40 000 FCFA/mois",
     description:
       "Optimisation pour les moteurs de recherche et visibilité Google",
     duration: "Durée : 3-6 mois minimum",
@@ -87,7 +87,7 @@ const services = [
       "Audit SEO complet",
       "Optimisation technique",
       "Création de contenu SEO",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
@@ -100,20 +100,20 @@ const services = [
       "Création de contenu visuel",
       "Publication programmée",
       "Community management",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: Palette,
     title: "Branding & Identité Visuelle",
-    price: "À partir de 200 000 FCFA",
+    price: "À partir de 70 000 FCFA",
     description: "Création d'identité de marque forte et mémorable",
     duration: "Durée : 2-3 semaines",
     features: [
       "Logo professionnel",
       "Charte graphique complète",
       "Cartes de visite",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
@@ -126,7 +126,7 @@ const services = [
       "Mises à jour sécurité",
       "Sauvegardes automatiques",
       "Support technique prioritaire",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
@@ -139,26 +139,26 @@ const services = [
       "Maintenance préventive",
       "Dépannage sur site",
       "Installation logiciels",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: GraduationCap,
     title: "Formation & Accompagnement Digital",
-    price: "À partir de 100 000 FCFA/session",
+    price: "À partir de 50 000 FCFA/session",
     description: "Formation de vos équipes aux outils et stratégies digitales",
     duration: "Durée : 1-3 jours",
     features: [
       "Formation sur mesure",
       "Ateliers pratiques",
       "Support pédagogique",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: Target,
     title: "Consultation & Stratégie Digitale",
-    price: "À partir de 150 000 FCFA",
+    price: "À partir de 80 000 FCFA",
     description:
       "Audit et conseil stratégique pour votre transformation digitale",
     duration: "Durée : 1-2 semaines",
@@ -166,33 +166,33 @@ const services = [
       "Audit digital complet",
       "Stratégie personnalisée",
       "Plan d'action détaillé",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: Database,
     title: "Systèmes de Gestion (CRM/ERP)",
-    price: "À partir de 1 000 000 FCFA",
+    price: "À partir de 500 000 FCFA",
     description: "Solutions de gestion d'entreprise sur mesure",
     duration: "Durée : 8-16 semaines",
     features: [
       "Gestion clients (CRM)",
       "Gestion des ressources (ERP)",
       "Tableaux de bord",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
   {
     icon: Globe,
     title: "Hébergement & Noms de Domaine",
-    price: "À partir de 30 000 FCFA/an",
+    price: "À partir de 20 000 FCFA/an",
     description: "Solutions d'hébergement fiables et sécurisées",
     duration: "Durée : Abonnement annuel",
     features: [
       "Hébergement haute performance",
       "Certificat SSL inclus",
       "Sauvegardes quotidiennes",
-      "+2 autres fonctionnalités",
+      "+ autres fonctionnalités",
     ],
   },
 ];
@@ -221,7 +221,7 @@ function ShoppingCart(props: React.SVGProps<SVGSVGElement>) {
 export default function Services() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       <main className="flex-1">
         {/* Hero Section */}
         <section
@@ -287,6 +287,15 @@ export default function Services() {
 
         {/* Services Grid */}
         <section className="py-16 bg-gray-50">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Découvrez nos <span className="text-[#006a34]">15 services</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Des solutions adaptées à tous vos besoins digitaux, de la création
+              de sites web au marketing digital.
+            </p>
+          </div>
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => {
@@ -324,7 +333,7 @@ export default function Services() {
 
                     <div className="flex flex-col gap-2">
                       <Link
-                        href="/services"
+                        href="/services/creation-site-web"
                         className="block text-center bg-[#006a34] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#005028] transition-colors duration-200"
                       >
                         Voir les détails
@@ -405,6 +414,49 @@ export default function Services() {
                 </h3>
                 <p className="text-gray-600">
                   Devis détaillés sans surprise et options de paiement flexibles
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Garanties */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center p-6 bg-gray-50 rounded-lg">
+                <div className="w-16 h-16 bg-[#006a34] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Livraison Garantie
+                </h3>
+                <p className="text-gray-600">
+                  Respect des délais convenus ou remboursement partiel
+                </p>
+              </div>
+
+              <div className="text-center p-6 bg-gray-50 rounded-lg">
+                <div className="w-16 h-16 bg-[#e2630c] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Headphones className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Support 24/7
+                </h3>
+                <p className="text-gray-600">
+                  Assistance technique continue après livraison
+                </p>
+              </div>
+
+              <div className="text-center p-6 bg-gray-50 rounded-lg">
+                <div className="w-16 h-16 bg-[#006a34] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Garantie Qualité
+                </h3>
+                <p className="text-gray-600">
+                  Satisfaction garantie ou révisions gratuites
                 </p>
               </div>
             </div>
@@ -496,21 +548,21 @@ export default function Services() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Parlons de votre projet</h2>
             <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-              Vous avez un projet digital en tête ? Discutons-en ensemble et
-              trouvons la solution parfaite pour votre entreprise.
+              Prêt à transformer votre présence digitale ? Contactez-nous dès
+              aujourd'hui pour un devis personnalisé et gratuit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/demande-devis"
                 className="bg-[#e2630c] hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
               >
-                Demander un devis
+                Demander un devis gratuit
               </Link>
               <Link
-                href="/contact"
+                href="tel:+242069899982"
                 className="border-2 border-white text-white hover:bg-white hover:text-[#006a34] px-8 py-3 rounded-lg font-semibold transition-all duration-300"
               >
-                Nous contacter
+                Nous appeler maintenant
               </Link>
             </div>
           </div>
