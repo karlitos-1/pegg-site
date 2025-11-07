@@ -1,42 +1,37 @@
-# -----------------------------
-# Netlify configuration for Next.js
-# -----------------------------
-
-# Build settings
 [build]
   command = "npm run build"
   publish = ".next"
-  environment = { 
-    NODE_VERSION = "18",            # Node compatible Next 15
-    NETLIFY_NEXT_PLUGIN_SKIP = "false" # Active le plugin Next.js
-  }
+  functions = "netlify/functions"
 
-# Allow remote images for next/image
-[images]
-  remote_images = [
-    "https://source.unsplash.com/.*",
-    "https://images.unsplash.com/.*",
-    "https://ext.same-assets.com/.*",
-    "https://ugc.same-assets.com/.*"
-  ]
-
-# Plugins
-[[plugins]]
-  package = "@netlify/plugin-nextjs" # Gère SSR, App Router, ISR, Middleware
+[functions]
+  # Permet au SSR de fonctionner avec Next.js
+  node_bundler = "esbuild"
+  included_files = ["public/**"]
 
 [[plugins]]
-  package = "@netlify/plugin-lighthouse" # Optionnel : audits perf et accessibilité
-  inputs = { thresholds = { performance = 90, accessibility = 90 } }
+  package = "@netlify/plugin-nextjs"
 
-# Redirect all requests to Netlify Next SSR function
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/next_ssr"
-  status = 200
-  force = true
+[build.environment]
+  NODE_VERSION = "18"
+  NEXT_TELEMETRY_DISABLED = "1"
 
-# Optional caching for faster rebuilds
 [[headers]]
   for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=()"
+
+# Autorisation des images distantes (important pour next/image)
+[[redirects]]
+  from = "/_next/image*"
+  to = "/.netlify/functions/next_image"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/next_render"
+  status = 200
