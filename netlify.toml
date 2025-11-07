@@ -1,37 +1,19 @@
 [build]
   command = "npm run build"
   publish = ".next"
-  functions = "netlify/functions"
-
-[functions]
-  # Permet au SSR de fonctionner avec Next.js
-  node_bundler = "esbuild"
-  included_files = ["public/**"]
+  environment = { NODE_VERSION = "18" }
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[build.environment]
-  NODE_VERSION = "18"
-  NEXT_TELEMETRY_DISABLED = "1"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/*"
   [headers.values]
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=()"
-
-# Autorisation des images distantes (important pour next/image)
-[[redirects]]
-  from = "/_next/image*"
-  to = "/.netlify/functions/next_image"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/next_render"
-  status = 200
