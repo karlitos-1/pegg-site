@@ -1,8 +1,7 @@
+import Footer from "@/components/Footer";
+import { Navigation } from "@/components/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
 
 export default function MakalaMarketPage() {
   const projectInfo = [
@@ -99,8 +98,7 @@ export default function MakalaMarketPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
-      <main className="flex-1">
+      <Navigation />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#006a34] to-[#004d26] text-white py-20">
         <div className="container mx-auto px-4">
@@ -376,10 +374,10 @@ export default function MakalaMarketPage() {
               </Link>
             </div>
           </div>
+        </div>
       </section>
-    </main>
-      <Footer />
-    </div>
 
+      <Footer />
+    </main>
   );
 }
